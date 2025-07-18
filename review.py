@@ -23,10 +23,12 @@ def tally_sentiments(reviews):
     for review in reviews:
         for word in positive_words:
             if word in review:
+                word.lower()
                 positive_count += 1
     for review in reviews:
         for word in negative_words:
             if word in review:
+                word.lower()
                 negative_count += 1
 
     return {"positive": positive_count, "negative": negative_count}
